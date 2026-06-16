@@ -15,6 +15,10 @@ import {
   ChevronLeft,
   ChevronRight,
   Maximize2,
+  GraduationCap,
+  Brain,
+  Search,
+  Shield,
 } from "lucide-react";
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
@@ -27,6 +31,10 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; className?: s
   ShoppingBag,
   Gem,
   Box,
+  GraduationCap,
+  Brain,
+  Search,
+  Shield,
 };
 
 /* ---- Types from JSON ---- */
@@ -52,16 +60,19 @@ function ProjectModal({
   const [activeSlide, setActiveSlide] = useState(0);
   const galleryRef = useRef<HTMLDivElement>(null);
 
-  const gallery = data.gallery as ProjectGalleryItem[];
+  const gallery = (data.gallery ?? []) as ProjectGalleryItem[];
+  const hasGallery = gallery.length > 0;
   const hasUrl = !!content.url;
 
   const goNext = useCallback(() => {
+    if (!hasGallery) return;
     setActiveSlide((prev) => (prev + 1) % gallery.length);
-  }, [gallery.length]);
+  }, [gallery.length, hasGallery]);
 
   const goPrev = useCallback(() => {
+    if (!hasGallery) return;
     setActiveSlide((prev) => (prev - 1 + gallery.length) % gallery.length);
-  }, [gallery.length]);
+  }, [gallery.length, hasGallery]);
 
   // Keyboard nav
   useEffect(() => {
@@ -124,10 +135,10 @@ function ProjectModal({
           </div>
         </div>
 
-        {/* Content — 50/50 split on desktop */}
-        <div className="flex-1 overflow-auto flex flex-col md:flex-row min-h-0">
-          {/* LEFT: Gallery — 50% */}
-          <div className="w-full md:w-1/2 flex flex-col min-w-0 border-r-0 md:border-r border-white/5">
+        {/* Content — gallery + info or info only */}
+        <div className={`flex-1 overflow-auto flex flex-col min-h-0 ${hasGallery ? "md:flex-row" : ""}`}>
+          {hasGallery && (
+            <div className="w-full md:w-1/2 flex flex-col min-w-0 border-r-0 md:border-r border-white/5">
             {/* Big preview */}
             <div className="relative p-4 md:p-5 flex-1">
               <AnimatePresence mode="wait">
@@ -237,9 +248,9 @@ function ProjectModal({
               ))}
             </div>
           </div>
+          )}
 
-          {/* RIGHT: Info panel — 50% */}
-          <div className="w-full md:w-1/2 overflow-y-auto">
+          <div className={`w-full overflow-y-auto ${hasGallery ? "md:w-1/2" : ""}`}>
             <div className="p-5 md:p-6 space-y-5">
               {/* Description */}
               <div>
@@ -282,6 +293,7 @@ function ProjectModal({
               </div>
 
               {/* Screens tags */}
+              {hasGallery && (
               <div>
                 <p className="text-[11px] font-semibold text-white/40 uppercase tracking-wider mb-2">
                   {lang === "en" ? "Screens" : "截圖"}
@@ -300,6 +312,7 @@ function ProjectModal({
                   ))}
                 </div>
               </div>
+              )}
 
               {/* Visit site button */}
               {hasUrl && (
@@ -335,7 +348,8 @@ function ProjectCard({
   const content = data[lang];
   const Icon = iconMap[data.icon] || Box;
   const hasUrl = !!content.url;
-  const gallery = data.gallery as ProjectGalleryItem[];
+  const gallery = (data.gallery ?? []) as ProjectGalleryItem[];
+  const hasGallery = gallery.length > 0;
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -428,7 +442,8 @@ function ProjectCard({
             </motion.div>
           </div>
 
-          {/* Gallery preview strip — real images */}
+          {/* Gallery preview strip */}
+          {hasGallery && (
           <div className="flex gap-2 mt-5 overflow-hidden">
             {gallery.slice(0, 4).map((g, gi) => (
               <motion.div
@@ -452,6 +467,7 @@ function ProjectCard({
               </motion.div>
             ))}
           </div>
+          )}
         </div>
       </div>
     </motion.div>

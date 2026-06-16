@@ -13,7 +13,7 @@ const stackData = [
     bg: "bg-cyan-400/10",
     glow: "group-hover:shadow-[0_0_30px_rgba(34,211,238,0.1)]",
     gradient: "from-cyan-500/20 to-blue-500/5",
-    items: ["HTML", "CSS", "JavaScript", "React", "Next.js"],
+    items: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Vite"],
   },
   {
     key: "backend",
@@ -22,7 +22,7 @@ const stackData = [
     bg: "bg-green-400/10",
     glow: "group-hover:shadow-[0_0_30px_rgba(74,222,128,0.1)]",
     gradient: "from-green-500/20 to-emerald-500/5",
-    items: [".NET C#", "PHP", "Node.js", "Python"],
+    items: [".NET C#", "PHP", "Node.js", "Python", "Express"],
   },
   {
     key: "database",
@@ -31,7 +31,7 @@ const stackData = [
     bg: "bg-amber-400/10",
     glow: "group-hover:shadow-[0_0_30px_rgba(251,191,36,0.1)]",
     gradient: "from-amber-500/20 to-orange-500/5",
-    items: ["MySQL", "SQL Server", "PostgreSQL"],
+    items: ["MySQL", "SQL Server", "PostgreSQL", "Supabase"],
   },
   {
     key: "cloud",
@@ -40,7 +40,7 @@ const stackData = [
     bg: "bg-blue-400/10",
     glow: "group-hover:shadow-[0_0_30px_rgba(96,165,250,0.1)]",
     gradient: "from-blue-500/20 to-indigo-500/5",
-    items: ["AWS", "Azure", "Hostinger", "Cloudways"],
+    items: ["AWS", "Azure", "Docker", "CI/CD"],
   },
 ] as const;
 
