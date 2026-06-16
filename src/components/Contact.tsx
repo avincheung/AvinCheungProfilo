@@ -85,6 +85,7 @@ export default function Contact() {
         >
           {t.contact.cta}
         </motion.p>
+        {/* Save to Contacts — vCard button 
         <motion.button
           type="button"
           initial={{ opacity: 0, y: 15 }}
@@ -96,7 +97,7 @@ export default function Contact() {
         >
           {t.contact.dontpressavin}
         </motion.button>
-
+        */}
 
         {/* Save to Contacts — vCard button */}
         <motion.div

@@ -30,9 +30,9 @@
     "about": {
       "title": "About Me",
       "p1": "I'm Cheung Chiu Hei (Avin) — a full-stack developer and project coordinator with 5+ years of experience building CMS platforms, e-commerce sites, enterprise systems, and AI-powered products for public-sector, education, healthcare, and large-organisation clients.",
-      "p2": "At xChain Solutions I lead project teams of 1–5 as sole consultant — delivering as developer, PM, cloud admin, and product planner for clients including MTR, City University, and hospital environments. Previously at BIGAZINES I was the sole developer maintaining 20+ production sites.",
-      "p3": "I specialise in end-to-end delivery: requirements gathering, architecture, coding, Supabase migrations & RLS, deployment, and stakeholder handover. I leverage AI tools to accelerate prototyping while maintaining security governance and documentation standards.",
-      "p4": "I'm particularly strong at standardising patterns across projects — Supabase Edge Functions, RAG pipelines with n8n and Qdrant, and AI-assisted workflows that cut repetitive work by 30–40%.",
+      "p2": "At xChain Solutions I sometimes lead project teams of 1–5, but often own the full development lifecycle solo — hands-on coding plus PM, cloud admin, and product planning for clients including MTR, universities, hospital systems, and SharePoint integration. Previously at BIGAZINES I was the sole developer maintaining 20+ production sites.",
+      "p3": "I specialise in end-to-end delivery: requirements gathering, architecture, coding, PostgreSQL migrations & RLS, deployment, and stakeholder handover. I leverage AI tools to accelerate prototyping while maintaining security governance and documentation standards.",
+      "p4": "I'm particularly strong at standardising patterns across projects — PostgreSQL RLS & server-side logic, RAG pipelines with n8n and Qdrant, and AI-assisted workflows that cut repetitive work by 30–40%.",
       "p5": "I love turning complex requirements into clean, usable systems — and there's nothing quite like seeing clients actually use something I built.",
       "languages": "Languages",
       "lang_cantonese": "Cantonese",
@@ -51,9 +51,9 @@
           "period": "Feb 2025 – Present",
           "location": "Hong Kong",
           "bullets": [
-            "Sole consultant in a 15-person organisation; leads project teams of 1–5 across development, PM, cloud admin, and product planning",
+            "Sometimes leads project teams of 1–5; often owns the full development lifecycle solo — hands-on coding, PM, cloud admin, and product planning",
             "Led full-cycle delivery of DMS, CMS, AMS, RAG applications, and AI agents for MTR, City University, hospital systems, and SharePoint integration",
-            "Standardised Supabase patterns (migrations, RLS, Edge Functions) across 8+ projects",
+            "Standardised PostgreSQL patterns (migrations, RLS, server-side logic) across 8+ projects",
             "Introduced AI-assisted workflows to accelerate delivery while maintaining security governance and documentation standards"
           ]
         },
@@ -79,7 +79,7 @@
       "cloud": "Cloud & Deploy",
       "other": "Other",
       "other_items": [
-        "Supabase (RLS, Edge Functions)",
+        "PostgreSQL (RLS, migrations)",
         "AI & RAG Integration",
         "n8n Workflow Automation",
         "Full-Stack Solo Delivery",
@@ -134,9 +134,9 @@
     "about": {
       "title": "關於我",
       "p1": "我是張朝熙（Avin），有超過 5 年全端開發與專案協調經驗，為公營機構、教育、醫療及大型企業客戶建設 CMS、電商、企業系統及 AI 產品。",
-      "p2": "現於 xChain Solutions 擔任唯一顧問，帶領 1–5 人專案團隊，服務 MTR、城大、醫院系統及 SharePoint 整合等客戶。此前在 BIGAZINES 為唯一開發者，維護 20+ 個正式環境網站。",
-      "p3": "擅長全流程交付：需求收集、架構設計、開發、Supabase migrations & RLS、部署及交接。善用 AI 工具加速原型開發，同時維持安全治理與文件標準。",
-      "p4": "特別擅長跨專案標準化模式——Supabase Edge Functions、n8n + Qdrant RAG 管道，以及 AI 輔助 workflow，減少 30–40% 重複工作。",
+      "p2": "現於 xChain Solutions 有時會帶領 1–5 人專案團隊，但也經常獨自負責全程開發流程，並涵蓋 PM、雲端管理及產品規劃，服務 MTR、大學、醫院系統及 SharePoint 整合等客戶。此前在 BIGAZINES 為唯一開發者，維護 20+ 個正式環境網站。",
+      "p3": "擅長全流程交付：需求收集、架構設計、開發、PostgreSQL migrations & RLS、部署及交接。善用 AI 工具加速原型開發，同時維持安全治理與文件標準。",
+      "p4": "特別擅長跨專案標準化模式——PostgreSQL RLS 與 server-side logic、n8n + Qdrant RAG 管道，以及 AI 輔助 workflow，減少 30–40% 重複工作。",
       "p5": "喜歡把複雜需求變成簡單好用的系統，也享受看到客戶樂於使用我做的東西。",
       "languages": "語言能力",
       "lang_cantonese": "粵語",
@@ -155,9 +155,9 @@
           "period": "2025年2月 – 現在",
           "location": "香港",
           "bullets": [
-            "15 人機構內唯一顧問，帶領 1–5 人專案團隊，涵蓋開發、PM、雲端管理及產品規劃",
-            "主導 DMS、CMS、AMS、RAG 應用及 AI agent 全流程交付，服務 MTR、城大、醫院系統及 SharePoint 整合",
-            "在 8+ 專案中標準化 Supabase 模式（migrations、RLS、Edge Functions）",
+            "有時帶領 1–5 人專案團隊，亦經常獨自負責全程開發流程，涵蓋全端開發、PM、雲端管理及產品規劃",
+            "主導 DMS、CMS、AMS、RAG 應用及 AI agent 全流程交付，服務 MTR、大學、醫院系統及 SharePoint 整合",
+            "在 8+ 專案中標準化 PostgreSQL 模式（migrations、RLS、server-side logic）",
             "引入 AI 輔助 workflow 加速交付，同時維持安全治理與文件標準"
           ]
         },
@@ -183,7 +183,7 @@
       "cloud": "雲端 & 部署",
       "other": "其他",
       "other_items": [
-        "Supabase（RLS、Edge Functions）",
+        "PostgreSQL（RLS、migrations）",
         "AI & RAG 整合",
         "n8n Workflow 自動化",
         "全端獨立交付",

@@ -10,21 +10,21 @@
       "accentHex": "#2dd4bf",
       "en": {
         "title": "ProcureEase",
-        "subtitle": "AI-Powered School Procurement Platform",
+        "subtitle": "AI School Procurement Platform",
         "url": "",
-        "description": "Hong Kong school procurement platform with a 14-stage tender workflow, supplier portal, audit center, and AI-assisted spec and bid analysis.",
-        "features": "8 system roles, invite-only Supabase RBAC, PDF extraction, OpenRouter/OpenAI integration for tender analysis.",
-        "role": "Sole full-stack lead — architecture, Supabase migrations & RLS, AI integration, Express API.",
-        "result": "Alpha delivered September 2025; standardized procurement workflow for school administrators."
+        "description": "Hong Kong school procurement platform with multi-stage tender workflow, supplier portal, audit center, and AI Assistant for spec and bid analysis.",
+        "features": "14 tender stages, 8 system roles, invite-only Postgres RBAC, spec/tender document generation, PDF extraction, local/cloud AI bid analysis.",
+        "role": "Sole full-stack lead — architecture & ideation, DB RLS, AI integration, Express API.",
+        "result": "Standardized procurement workflow for school administrators."
       },
       "zh": {
         "title": "ProcureEase",
         "subtitle": "AI 學校採購平台",
         "url": "",
-        "description": "香港學校採購平台，14 階段招標流程、供應商入口、審計中心，以及 AI 輔助規格與投標分析。",
-        "features": "8 個系統角色、邀請制 Supabase RBAC、PDF 提取、OpenRouter/OpenAI 招標分析。",
-        "role": "獨立全端負責人——架構、Supabase migrations & RLS、AI 整合、Express API。",
-        "result": "2025 年 9 月交付 Alpha；為學校管理員標準化採購流程。"
+        "description": "香港學校採購平台，多階段招標流程、審計中心，以及 AI Assistant 輔助規格與投標分析。",
+        "features": "規格招標文件生成、PDF 提取、Local/Cloud AI 招標分析。",
+        "role": "獨立全端負責人——架構想法構思、DB RLS、AI 整合、Express API。",
+        "result": "為學校管理員標準化採購流程。"
       },
       "gallery": []
     },
@@ -40,19 +40,19 @@
         "title": "XCB-SEN",
         "subtitle": "Special Educational Needs Care Platform",
         "url": "",
-        "description": "Multi-role SEN student care platform for Hong Kong schools — therapy records (PT/OT/ST), goals, skill ratings, contact book, and AI assistants.",
-        "features": "15 roles, 15 tables, 28 Supabase migrations, demo-tenant sandboxes, in-app notification center.",
-        "role": "Architecture, full-stack development, Supabase RLS + triggers, Express AI server.",
-        "result": "Comprehensive SEN workflow digitised with role-based access and AI-assisted reporting."
+        "description": "Multi-role SEN student care platform for Hong Kong schools — therapy records (PT/OT/ST), class-teacher training, goals, skill ratings, contact book, and AI assistants with demo-tenant sandboxes.",
+        "features": "15-role JSONB permission matrix, therapy dashboards, annual reports, role-scoped AI chat, in-app notifications + Postgres triggers, 28 migrations / 15 tables.",
+        "role": "Architecture, 13 app pages, Express AI server, Postgres RLS + triggers, demo-tenant isolation.",
+        "result": "Comprehensive SEN workflow digitised with granular role-based access and AI-assisted reporting."
       },
       "zh": {
         "title": "XCB-SEN",
         "subtitle": "特殊教育需要照顧平台",
         "url": "",
-        "description": "香港學校多角色 SEN 學生照顧平台——治療記錄（PT/OT/ST）、目標、技能評分、聯絡簿及 AI 助手。",
-        "features": "15 個角色、15 張表、28 個 Supabase migrations、demo 租戶沙盒、站內通知中心。",
-        "role": "架構設計、全端開發、Supabase RLS + triggers、Express AI server。",
-        "result": "完整 SEN 工作流程數碼化，具角色權限控制及 AI 輔助報告。"
+        "description": "香港學校多角色 SEN 學生照顧平台——治療記錄（PT/OT/ST）、班主任訓練、目標與技能評分、聯絡簿、AI 助手及 demo 租戶沙盒。",
+        "features": "15 角色 JSONB 權限矩陣、治療儀表板、年度報告、角色範圍 AI 對話、站內通知 + Postgres triggers、28 migrations / 15 張表。",
+        "role": "架構設計、13 個應用頁面、Express AI server、Postgres RLS + triggers、demo 租戶隔離。",
+        "result": "完整 SEN 工作流程數碼化，具細粒度角色權限及 AI 輔助報告。"
       },
       "gallery": []
     },
@@ -68,19 +68,19 @@
         "title": "RAG Chat",
         "subtitle": "Enterprise Knowledge Search",
         "url": "",
-        "description": "Enterprise AI chat over Google Drive / OneDrive document libraries — permission-scoped RAG tied to Drive share permissions per user email.",
-        "features": "n8n + Qdrant vector search, Supabase auth & admin directory ACLs, async message polling.",
-        "role": "React chat UI, Supabase permissions, n8n workflow design, Qdrant filter architecture.",
-        "result": "Staff can query internal documents without accessing files outside their Drive permissions."
+        "description": "Enterprise AI chat over Google Drive / OneDrive libraries — permission-scoped RAG keyed to Drive share rights per user email, not a flat document corpus.",
+        "features": "n8n + Qdrant pipeline with directory ACLs (~60+ codes) mirroring Drive shares; React/Vite chat with attachments and markdown; async message polling.",
+        "role": "Chat UI, database permissions & directory ACL editor, n8n workflow design, Qdrant filter architecture.",
+        "result": "Staff query internal documents without retrieving chunks outside their Drive permissions."
       },
       "zh": {
         "title": "RAG Chat",
         "subtitle": "企業知識搜尋",
         "url": "",
-        "description": "企業 AI 對話，覆蓋 Google Drive / OneDrive 文件庫——按用戶電郵對應 Drive 分享權限的 RAG 檢索。",
-        "features": "n8n + Qdrant 向量搜尋、Supabase 認證及目錄 ACL 管理、非同步訊息輪詢。",
-        "role": "React 對話 UI、Supabase 權限、n8n workflow 設計、Qdrant filter 架構。",
-        "result": "員工可查詢內部文件，不會存取超出 Drive 權限的內容。"
+        "description": "企業 AI 對話，覆蓋 Google Drive / OneDrive 文件庫——按用戶電郵對應 Drive 分享權限做 RAG 檢索，而非扁平化全文索引。",
+        "features": "n8n + Qdrant 管道，目錄 ACL（60+ codes）對應 Drive 分享；React/Vite 對話介面（附件、Markdown）；非同步訊息輪詢。",
+        "role": "對話 UI、資料庫權限與目錄 ACL 管理、n8n workflow 設計、Qdrant filter 架構。",
+        "result": "員工可查詢內部文件，檢索結果不會超出其 Drive 權限範圍。"
       },
       "gallery": []
     },
@@ -96,19 +96,19 @@
         "title": "M365 Audit Tool",
         "subtitle": "SharePoint Audit Log Analytics",
         "url": "",
-        "description": "Microsoft 365 SharePoint audit log analysis — CSV import (50+ columns), search with 14 indexes, access-rights reports, and compliance analytics.",
-        "features": "Express API + Supabase monorepo, Recharts dashboards, batch import pipeline.",
-        "role": "Import pipeline, search UI, Express auth layer, analytics dashboards.",
-        "result": "IT admins can search, analyse, and report on M365 audit activity at scale."
+        "description": "M365 SharePoint audit log analysis — CSV import (50+ columns), search with 14 indexes, access-rights reports, user groups, and Recharts compliance analytics.",
+        "features": "Express API + Postgres monorepo; 8 pages (AuditSearch, ImportData, Analytics, AccessRights, UserGroups, UserManagement); client-side CSV batch import.",
+        "role": "Import pipeline, search UI, Express JWT auth layer, analytics dashboards.",
+        "result": "IT admins can search, analyse access rights, and report on M365 audit activity at scale."
       },
       "zh": {
         "title": "M365 Audit Tool",
         "subtitle": "SharePoint 審計日誌分析",
         "url": "",
-        "description": "Microsoft 365 SharePoint 審計日誌分析——CSV 匯入（50+ 欄）、14 個索引搜尋、存取權限報告及合規分析。",
-        "features": "Express API + Supabase monorepo、Recharts 儀表板、批次匯入管道。",
-        "role": "匯入管道、搜尋 UI、Express 認證層、分析儀表板。",
-        "result": "IT 管理員可大規模搜尋、分析及報告 M365 審計活動。"
+        "description": "M365 SharePoint 審計日誌分析——CSV 匯入（50+ 欄）、14 個索引搜尋、存取權限報告、用戶群組及 Recharts 合規分析。",
+        "features": "Express API + Postgres monorepo；8 個頁面（搜尋、匯入、分析、存取權限、用戶群組、用戶管理）；客戶端 CSV 批次匯入。",
+        "role": "匯入管道、搜尋 UI、Express JWT 認證層、分析儀表板。",
+        "result": "IT 管理員可大規模搜尋、分析存取權限及報告 M365 審計活動。"
       },
       "gallery": []
     },
@@ -124,19 +124,19 @@
         "title": "Starfish ID",
         "subtitle": "Digital Eco-Friendly Business Card Platform",
         "url": "https://starfishid.com/",
-        "description": "Built from scratch — a digital business card system with eco-friendly approach, pushing vCards directly to phone contacts.",
-        "features": "Employee dashboard (CRUD, import), bilingual EN/ZH, photo upload, QR code generation.",
-        "role": "Solo full-stack dev + deployment + maintenance + internal coordination.",
-        "result": "Actively used by the company and select clients, replacing paper business cards. Stable in production."
+        "description": "Digital business-card platform on Umbraco 13 — organisation → card hierarchy, vCard 3.0 export, QR codes, PWA member portal, and access reporting on Azure SQL.",
+        "features": "Umbraco 13 / .NET 8, bilingual EN/ZH, QRCoder + styled QR views, CSV org export, Delivery API, card access analytics.",
+        "role": "Sole developer — Umbraco members, VCF export service, QRCoder integration, Delivery API, deployment on Azure.",
+        "result": "Actively used internally and by select clients; replaces paper business cards with trackable digital cards."
       },
       "zh": {
         "title": "Starfish ID",
         "subtitle": "數位環保名片平台",
         "url": "https://starfishid.com/",
-        "description": "自家從零開發的數位名片系統，eco-friendly 方向，可直推 vCard 到手機聯絡人。",
-        "features": "員工後台管理（新增/編輯/搜尋/匯入）、中英雙語、照片上傳、QR code 生成。",
-        "role": "獨立全端開發 + 部署 + 維護 + 內部需求協調。",
-        "result": "公司內部及部分客戶已在使用，取代紙本名片，穩定運行中。"
+        "description": "Umbraco 13 數位名片平台——機構 → 名片層級、vCard 3.0 匯出、QR code、PWA 會員入口及 Azure SQL 存取報告。",
+        "features": "Umbraco 13 / .NET 8、中英雙語、QRCoder 樣式 QR、CSV 機構匯出、Delivery API、名片存取分析。",
+        "role": "獨立開發——Umbraco members、VCF 匯出、QRCoder 整合、Delivery API、Azure 部署。",
+        "result": "公司內部及部分客戶已在使用，以可追蹤數位名片取代紙本名片。"
       },
       "gallery": []
     },
@@ -149,22 +149,50 @@
       "glowColor": "rgba(251,191,36,0.5)",
       "accentHex": "#fbbf24",
       "en": {
-        "title": "YATA Official Website + CMS",
-        "subtitle": "1000+ Content Pages · Custom CMS",
+        "title": "YATA Official Website",
+        "subtitle": "Large-Scale Retail CMS · Umbraco 8",
         "url": "https://yata.hk/",
-        "description": "First major project — over 1000+ content pages (recipes, lifestyle guides, product recommendations, eShop links).",
-        "features": "Custom CMS, SEO optimization, high-volume public digital services on .NET Framework 4.6 and Azure.",
-        "role": "Requirements gathering, custom CMS build, backend management, early bug fixes, long-term maintenance.",
-        "result": "Client can self-manage content. Website traffic and user experience significantly improved."
+        "description": "YATA official retail website — large-scale Umbraco 8 CMS with 75 document types covering products, stores, recipes, promotions, and multilingual SEO for high-volume public services.",
+        "features": "Umbraco 8 / .NET Framework 4.7.2, CMSImport bulk content, ContentQuery site-wide search, Reflections SEO, 21+ listing macros, Leaflet store maps.",
+        "role": "Sole developer — CMS architecture, search, bulk imports, SEO, deployment and long-term maintenance.",
+        "result": "Client self-manages content at scale; site traffic and user experience significantly improved."
       },
       "zh": {
-        "title": "YATA 一田官方網站 + CMS",
-        "subtitle": "超過 1000+ 內容頁 · 自訂 CMS",
+        "title": "YATA 一田官方網站",
+        "subtitle": "大型零售 CMS · Umbraco 8",
         "url": "https://yata.hk/",
-        "description": "第一個大 project，超過 1000+ 內容頁（食譜、生活攻略、商品推薦、eShop 連結）。",
-        "features": "自訂 CMS、SEO 優化、.NET Framework 4.6 + Azure 高流量公共服務。",
-        "role": "從需求溝通、建自訂 CMS、後台管理、修正早期 bug、SEO 優化，到上線後長期維護。",
-        "result": "客戶可自行更新內容，網站流量與使用者體驗大幅提升。"
+        "description": "一田百貨官方網站——大型 Umbraco 8 CMS，75 個 document types，涵蓋商品、分店、食譜、推廣及多語言 SEO，服務高流量公共網站。",
+        "features": "Umbraco 8 / .NET Framework 4.7.2、CMSImport 批量內容、ContentQuery 全站搜尋、Reflections SEO、21+ 列表 macro、Leaflet 分店地圖。",
+        "role": "獨立開發——CMS 架構、搜尋、批量匯入、SEO、部署及長期維護。",
+        "result": "客戶可自行管理大量內容，網站流量與使用者體驗大幅提升。"
+      },
+      "gallery": []
+    },
+    {
+      "id": "swcs-academy",
+      "icon": "BookOpen",
+      "accent": "from-indigo-500 to-violet-500",
+      "accentBg": "bg-indigo-500/10",
+      "accentText": "text-indigo-400",
+      "glowColor": "rgba(129,140,248,0.5)",
+      "accentHex": "#818cf8",
+      "en": {
+        "title": "SWCS Academy",
+        "subtitle": "CPD E-Learning Platform",
+        "url": "",
+        "description": "CPD e-learning platform on Umbraco 13 / .NET 8 — Stripe course checkout, CloudFront video delivery, CPD PDF certificates, and member portal with custom search.",
+        "features": "22 custom controllers, Stripe Checkout + webhooks, AWS S3 + CloudFront signed URLs, DinkToPdf certificates, Examine search, ExportOrder backoffice plugin.",
+        "role": "Sole developer — Umbraco commerce, video pipeline, certificate generation, search, and member dashboard.",
+        "result": "End-to-end CPD course purchase, video learning, and certificate issuance for professional development."
+      },
+      "zh": {
+        "title": "SWCS Academy",
+        "subtitle": "CPD 網上學習平台",
+        "url": "",
+        "description": "Umbraco 13 / .NET 8 CPD 網上學習平台——Stripe 課程結帳、CloudFront 影片串流、CPD PDF 證書及會員入口與自訂搜尋。",
+        "features": "22 個自訂 controller、Stripe Checkout + webhooks、AWS S3 + CloudFront 簽名 URL、DinkToPdf 證書、Examine 搜尋、ExportOrder 後台插件。",
+        "role": "獨立開發——Umbraco 電商、影片管道、證書生成、搜尋及會員儀表板。",
+        "result": "涵蓋 CPD 課程購買、影片學習及專業進修證書發放的完整流程。"
       },
       "gallery": []
     },
@@ -178,21 +206,21 @@
       "accentHex": "#60a5fa",
       "en": {
         "title": "Luxury Gateway Ltd",
-        "subtitle": "Premium Limousine Service Website",
+        "subtitle": "Premium Chauffeur Service Website",
         "url": "https://luxurygatewayltd.com/",
-        "description": "High-end limousine service website with booking forms, region-based auto-pricing, and Stripe payments.",
-        "features": ".NET 6 on Azure, reservation workflow, Stripe payment integration.",
-        "role": "Multiple rounds of client communication, full-stack dev, payment logic, deployment, PM ensuring delivery matches business goals.",
-        "result": "After launch, clients can book and pay online directly — streamlined the entire business workflow."
+        "description": "Chauffeur corporate site on Umbraco 8 — Stripe One Way / By The Hour booking, HK map pricing via GeoJSON, Webflow UI, hosted on Azure App Service.",
+        "features": "Umbraco 8 / .NET Framework 4.7.2, Stripe Checkout API, GeoJSON HK district routing, Umbraco Forms + Loqate address, reCAPTCHA.",
+        "role": "Sole developer after designer + sales scope — Umbraco build, Stripe integration, booking logic, Azure deployment.",
+        "result": "Clients book and pay online directly; streamlined reservation workflow for the chauffeur business."
       },
       "zh": {
         "title": "Luxury Gateway Ltd",
         "subtitle": "豪華禮車服務網站",
         "url": "https://luxurygatewayltd.com/",
-        "description": "高端禮車服務企業網站，整合預約表單、按地區自動計價、Stripe 支付。",
-        "features": ".NET 6 + Azure、預約流程、Stripe 支付整合。",
-        "role": "多次跟客戶溝通需求、全端開發、支付邏輯處理、上線維護，當 PM 確保交付 match 業務目標。",
-        "result": "網站上線後，客戶可直接線上接單與收款，業務流程順暢許多。"
+        "description": "Umbraco 8 豪華禮車企業網站——Stripe 單程 / 包鐘預約、GeoJSON 香港地圖計價、Webflow UI，部署於 Azure App Service。",
+        "features": "Umbraco 8 / .NET Framework 4.7.2、Stripe Checkout API、GeoJSON 香港分區路線、Umbraco Forms + Loqate 地址、reCAPTCHA。",
+        "role": "設計師及銷售定義範圍後獨立開發——Umbraco 建置、Stripe 整合、預約邏輯、Azure 部署。",
+        "result": "客戶可直接線上預約及付款，業務接單流程順暢許多。"
       },
       "gallery": []
     }

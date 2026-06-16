@@ -19,6 +19,7 @@ import {
   Brain,
   Search,
   Shield,
+  BookOpen,
 } from "lucide-react";
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
@@ -35,6 +36,7 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; className?: s
   Brain,
   Search,
   Shield,
+  BookOpen,
 };
 
 /* ---- Types from JSON ---- */

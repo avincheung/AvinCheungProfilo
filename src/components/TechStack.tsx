@@ -31,7 +31,7 @@ const stackData = [
     bg: "bg-amber-400/10",
     glow: "group-hover:shadow-[0_0_30px_rgba(251,191,36,0.1)]",
     gradient: "from-amber-500/20 to-orange-500/5",
-    items: ["MySQL", "SQL Server", "PostgreSQL", "Supabase"],
+    items: ["MySQL", "SQL Server", "PostgreSQL"],
   },
   {
     key: "cloud",
