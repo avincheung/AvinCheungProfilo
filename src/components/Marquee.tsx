@@ -12,7 +12,7 @@ const items = [
   "AWS",
   "Azure",
   "MySQL",
-  "PostgreSQL",
+  "Sql DB",
   "Docker",
   "AI Integration",
   "Full-Stack",

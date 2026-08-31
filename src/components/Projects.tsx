@@ -22,6 +22,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import { useState, useEffect, useCallback, useRef } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import projectsData from "@/data/projects.json";
 
@@ -95,23 +96,26 @@ function ProjectModal({
     };
   }, []);
 
-  return (
+  return createPortal(
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-      className="project-modal-overlay flex items-center justify-center p-4 md:p-8"
+      transition={{ duration: 0.2 }}
+      className="project-modal-overlay flex items-center justify-center p-2 md:p-4"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
       <motion.div
-        layoutId={`project-card-${projectIdx}`}
-        className="w-full max-w-5xl max-h-[90vh] rounded-2xl overflow-hidden flex flex-col"
+        initial={{ opacity: 0, scale: 0.97, y: 12 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.97, y: 12 }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
+        className="relative z-10 w-full max-w-7xl lg:max-w-[min(1400px,96vw)] h-[95vh] max-h-[95vh] rounded-2xl overflow-hidden flex flex-col"
         style={{
           background: "rgba(12, 12, 28, 0.98)",
           border: `1px solid ${data.accentHex}20`,
         }}
-        transition={{ type: "spring", damping: 30, stiffness: 300 }}
+        onClick={(e) => e.stopPropagation()}
       >
         {/* Top accent bar */}
         <div className={`h-1 bg-gradient-to-r ${data.accent}`} />
@@ -140,9 +144,9 @@ function ProjectModal({
         {/* Content — gallery + info or info only */}
         <div className={`flex-1 overflow-auto flex flex-col min-h-0 ${hasGallery ? "md:flex-row" : ""}`}>
           {hasGallery && (
-            <div className="w-full md:w-1/2 flex flex-col min-w-0 border-r-0 md:border-r border-white/5">
+            <div className="w-full md:w-3/5 flex flex-col min-w-0 border-r-0 md:border-r border-white/5">
             {/* Big preview */}
-            <div className="relative p-4 md:p-5 flex-1">
+            <div className="relative p-4 md:p-5 flex-1 min-h-[280px] md:min-h-0">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeSlide}
@@ -150,14 +154,14 @@ function ProjectModal({
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.96 }}
                   transition={{ duration: 0.25 }}
-                  className="w-full relative rounded-xl overflow-hidden bg-black/30 aspect-video"
+                  className="w-full h-full min-h-[240px] md:min-h-[560px] relative rounded-xl overflow-hidden bg-black/30"
                 >
                   <Image
                     src={gallery[activeSlide].image}
                     alt={gallery[activeSlide].label}
                     fill
                     className="object-contain"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, 70vw"
                   />
                   {/* Scan line animation */}
                   <motion.div
@@ -252,7 +256,7 @@ function ProjectModal({
           </div>
           )}
 
-          <div className={`w-full overflow-y-auto ${hasGallery ? "md:w-1/2" : ""}`}>
+          <div className={`w-full overflow-y-auto ${hasGallery ? "md:w-2/5" : ""}`}>
             <div className="p-5 md:p-6 space-y-5">
               {/* Description */}
               <div>
@@ -332,7 +336,8 @@ function ProjectModal({
           </div>
         </div>
       </motion.div>
-    </motion.div>
+    </motion.div>,
+    document.body
   );
 }
 
@@ -341,10 +346,12 @@ function ProjectCard({
   data,
   index,
   onClick,
+  isSelected = false,
 }: {
   data: ProjectData;
   index: number;
   onClick: () => void;
+  isSelected?: boolean;
 }) {
   const { lang } = useLang();
   const content = data[lang];
@@ -367,14 +374,14 @@ function ProjectCard({
   return (
     <motion.div
       ref={cardRef}
-      layoutId={`project-card-${index}`}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
       onMouseMove={handleMouseMove}
       onClick={onClick}
-      className="glow-border cursor-pointer group"
+      aria-hidden={isSelected}
+      className={`glow-border cursor-pointer group ${isSelected ? "invisible pointer-events-none" : ""}`}
       style={
         { "--glow-color": data.glowColor } as React.CSSProperties
       }
@@ -491,6 +498,7 @@ export default function Projects() {
             key={project.id}
             data={project}
             index={i}
+            isSelected={selectedIdx === i}
             onClick={() => setSelectedIdx(i)}
           />
         ))}

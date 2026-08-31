@@ -225,7 +225,7 @@ body {
 .project-modal-overlay {
   position: fixed;
   inset: 0;
-  z-index: 100;
+  z-index: 200;
   background: rgba(5, 5, 16, 0.85);
   backdrop-filter: blur(20px);
 }

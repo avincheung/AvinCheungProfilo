@@ -67,7 +67,7 @@ export default function About() {
     { name: t.about.lang_mandarin, level: t.about.lang_speak, pct: 100 },
     { name: t.about.lang_english, level: t.about.lang_speak, pct: 100 },
     { name: t.about.lang_japanese, level: t.about.lang_listen, pct: 50 },
-  ];
+  ].filter((l) => l.name);
 
   const currentStats = stats[lang];
 

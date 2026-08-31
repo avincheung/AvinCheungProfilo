@@ -26,10 +26,15 @@
         "role": "獨立全端負責人——架構想法構思、DB RLS、AI 整合、Express API。",
         "result": "為學校管理員標準化採購流程。"
       },
-      "gallery": []
+      "gallery": [
+        { "image": "/project/ProcureEase/dashboard.png", "label": "Dashboard" },
+        { "image": "/project/ProcureEase/ai-workshop.png", "label": "AI Workshop" },
+        { "image": "/project/ProcureEase/bid-analysis.png", "label": "Bid Analysis" },
+        { "image": "/project/ProcureEase/bid-analysis-detail.png", "label": "Bid Analysis Detail" }
+      ]
     },
     {
-      "id": "xcb-sen",
+      "id": "sensights",
       "icon": "Brain",
       "accent": "from-violet-500 to-purple-500",
       "accentBg": "bg-violet-500/10",
@@ -37,24 +42,32 @@
       "glowColor": "rgba(167,139,250,0.5)",
       "accentHex": "#a78bfa",
       "en": {
-        "title": "XCB-SEN",
-        "subtitle": "Special Educational Needs Care Platform",
+        "title": "SENsights",
+        "subtitle": "School-Hosted SEN Care Platform",
         "url": "",
-        "description": "Multi-role SEN student care platform for Hong Kong schools — therapy records (PT/OT/ST), class-teacher training, goals, skill ratings, contact book, and AI assistants with demo-tenant sandboxes.",
-        "features": "15-role JSONB permission matrix, therapy dashboards, annual reports, role-scoped AI chat, in-app notifications + Postgres triggers, 28 migrations / 15 tables.",
-        "role": "Architecture, 13 app pages, Express AI server, Postgres RLS + triggers, demo-tenant isolation.",
-        "result": "Comprehensive SEN workflow digitised with granular role-based access and AI-assisted reporting."
+        "description": "SENsights is a school-hosted SEN (special educational needs) app for one school at a time. Staff keep student profiles, class lists, therapy records, goals, a training catalogue, and alerts (for example diet and medication) in one place, with access limited by role.",
+        "features": "AI help (summaries, matching, catalogue translate) goes through a Node API — not the browser talking to the model directly. Student lists are always paged or searched; the app never loads the whole student table. Stack: React frontend, Supabase (auth, Sql DB, storage), and Sql DB triggers for notifications.",
+        "role": "Full-stack delivery — React UI, Node AI API, Supabase auth & storage, Sql DB schema, triggers, and role-based access.",
+        "result": "Production runs standalone (one school per deploy). A separate demo build supports multi-tenant trials only."
       },
       "zh": {
-        "title": "XCB-SEN",
-        "subtitle": "特殊教育需要照顧平台",
+        "title": "SENsights",
+        "subtitle": "學校自建 SEN 照顧平台",
         "url": "",
-        "description": "香港學校多角色 SEN 學生照顧平台——治療記錄（PT/OT/ST）、班主任訓練、目標與技能評分、聯絡簿、AI 助手及 demo 租戶沙盒。",
-        "features": "15 角色 JSONB 權限矩陣、治療儀表板、年度報告、角色範圍 AI 對話、站內通知 + Postgres triggers、28 migrations / 15 張表。",
-        "role": "架構設計、13 個應用頁面、Express AI server、Postgres RLS + triggers、demo 租戶隔離。",
-        "result": "完整 SEN 工作流程數碼化，具細粒度角色權限及 AI 輔助報告。"
+        "description": "SENsights 是每次服務一所學校的 SEN（特殊教育需要）應用。教職員可在同一平台管理學生檔案、班級名單、治療記錄、目標、訓練目錄及提醒（例如飲食、用藥），並按角色限制存取。",
+        "features": "AI 輔助（摘要、配對、目錄翻譯）經 Node API 處理，瀏覽器不直接呼叫模型。學生列表一律分頁或搜尋，不會一次載入整個學生表。技術棧：React 前端、Supabase（認證、Sql DB、儲存）及 Sql DB triggers 通知。",
+        "role": "全端交付——React UI、Node AI API、Supabase 認證與儲存、Sql DB schema、triggers 及角色權限。",
+        "result": "正式環境為 standalone（每校獨立部署）；另有 demo 版本僅供多租戶試用。"
       },
-      "gallery": []
+      "gallery": [
+        { "image": "/project/SENsights/dashboard.png", "label": "Dashboard" },
+        { "image": "/project/SENsights/student-profile.png", "label": "Student Profile & Radar" },
+        { "image": "/project/SENsights/permissions.png", "label": "Role Permissions" },
+        { "image": "/project/SENsights/system-settings.png", "label": "System Settings" },
+        { "image": "/project/SENsights/ai-audit.png", "label": "AI Audit" },
+        { "image": "/project/SENsights/batch-import.png", "label": "Batch Import" },
+        { "image": "/project/SENsights/training-catalogue.png", "label": "Training Catalogue" }
+      ]
     },
     {
       "id": "rag-chat",
@@ -97,7 +110,7 @@
         "subtitle": "SharePoint Audit Log Analytics",
         "url": "",
         "description": "M365 SharePoint audit log analysis — CSV import (50+ columns), search with 14 indexes, access-rights reports, user groups, and Recharts compliance analytics.",
-        "features": "Express API + Postgres monorepo; 8 pages (AuditSearch, ImportData, Analytics, AccessRights, UserGroups, UserManagement); client-side CSV batch import.",
+        "features": "Express API + Sql DB monorepo; 8 pages (AuditSearch, ImportData, Analytics, AccessRights, UserGroups, UserManagement); client-side CSV batch import.",
         "role": "Import pipeline, search UI, Express JWT auth layer, analytics dashboards.",
         "result": "IT admins can search, analyse access rights, and report on M365 audit activity at scale."
       },
@@ -106,7 +119,7 @@
         "subtitle": "SharePoint 審計日誌分析",
         "url": "",
         "description": "M365 SharePoint 審計日誌分析——CSV 匯入（50+ 欄）、14 個索引搜尋、存取權限報告、用戶群組及 Recharts 合規分析。",
-        "features": "Express API + Postgres monorepo；8 個頁面（搜尋、匯入、分析、存取權限、用戶群組、用戶管理）；客戶端 CSV 批次匯入。",
+        "features": "Express API + Sql DB monorepo；8 個頁面（搜尋、匯入、分析、存取權限、用戶群組、用戶管理）；客戶端 CSV 批次匯入。",
         "role": "匯入管道、搜尋 UI、Express JWT 認證層、分析儀表板。",
         "result": "IT 管理員可大規模搜尋、分析存取權限及報告 M365 審計活動。"
       },
